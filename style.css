@@ -1,10 +1,9 @@
 * {
   --primaryColor: #15f900;
   --backgroundColor: #11141d;
-  --textColor: white;
-  --lightgreen: #16ffbd;
+  --textColor: #7d8597;
   --darkgreen: #37b76d;
-  --pink: #f070a1;
+  --color2: #415a77;
 }
 
 body {
@@ -16,8 +15,26 @@ a {
   color: var(--textColor);
 }
 h2 {
-  /* background: var(--darkgreen); */
+  color: var(--darkgreen);
   /* text-align: center; */
+}
+
+h3 {
+  color: var(--darkgreen);
+}
+
+h4 {
+  color: var(--darkgreen);
+}
+
+.org-ul {
+  color: var(--textColor);
+}
+
+.author,
+.date {
+  text-align: center;
+  color: var(--primaryColor);
 }
 
 ::-webkit-scrollbar {
@@ -30,7 +47,8 @@ h2 {
 .title {
   text-align: center;
   margin-bottom: 0.2em;
-  background-color: green;
+  color: var(--primaryColor);
+  /* background-color: ; */
   border-radius: 5px;
 }
 .subtitle {
