@@ -7,7 +7,7 @@
 | I love Linux, Programming, 3D Design and much more.                                                                                                             |
 | I also enjoy teaching and I will be teaching you everything you need to know to get better in coding.                                                       |
 | The main idea behind it is to build a strong community where we can help each other to get better in coding/programming or any other stuff related to computer. |
-+ This is my social media handle
++ These are my social media handles
   - [[https://github.com/CISSSCO/][GitHub]]
   - [[mailto:cisssco581b@gmail.com][Gmail]]
   - [[https://www.linkedin.com/in/abhishek-raj-9b891415b/][LinkedIn]]
