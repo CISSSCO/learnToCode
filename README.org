@@ -15,7 +15,7 @@
 
 
 * Requirements
-This is for anyone who wants to know about coding/proramming.
+This is for anyone who wants to know about coding/programming.
 This is a course related to programming, any laptop will do the job.
 - A laptop
 - Android + keyboard + otg (if you don't have a laptop)
@@ -29,12 +29,12 @@ I will be adding more stuffs as needed.
 *** C/C++
   + We will be starting with c/c++.
   + I believe once you know this language, it won't be difficult to pick the others.
-  + The main idea to start with c/c++ is that the first year students studing in colleges will benefit from the course for their examination.
+  + The main idea to start with c/c++ is that the first year students studying in colleges will benefit from the course for their examination.
 
 *** OOPS
   + After that we will move towards the most important concepts of c++ programming language called OOPS.
-  + We will study the needs of oops and the main concept behind the oops like polymorphism, encapsulation, inheritence, abstration, etc.
-  + We will also build some cool project in this section.
+  + We will study the needs of oops and the main concept behind the oops like polymorphism, encapsulation, inheritance, abstration, etc.
+  + We will also build some cool projects in this section.
 
 *** DSA
   + Then we will learn about the Data Structures and Algorithm.
