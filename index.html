@@ -1,411 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<!-- 2023-01-12 Thu 11:51 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Learn to Code</title>
-<meta name="author" content="Abhishek Raj" />
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+  <head>
+    <!-- 2023-01-12 Thu 11:51 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learn to Code</title>
+    <meta name="author" content="Abhishek Raj" />
+    <meta name="generator" content="Org Mode" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content" class="content">
+      <h1 class="title">Learn to Code</h1>
+      <div id="table-of-contents" role="doc-toc">
+        <h2>Table of Contents</h2>
+        <div id="text-table-of-contents" role="doc-toc">
+          <ul>
+            <li><a href="#org5524496">1. About me</a></li>
+            <li><a href="#org56e00cc">2. Requirements</a></li>
+            <li>
+              <a href="#orgb63633e">3. Contents</a>
+              <ul>
+                <li>
+                  <a href="#org4f9b2f9">3.1. Programming</a>
+                  <ul>
+                    <li><a href="#orge8fd6e3">3.1.1. C/C++</a></li>
+                    <li><a href="#orgad30464">3.1.2. OOPS</a></li>
+                    <li><a href="#orgd8a0aac">3.1.3. DSA</a></li>
+                    <li><a href="#orgd19a850">3.1.4. CP</a></li>
+                    <li><a href="#org48ded4e">3.1.5. Other languages</a></li>
+                  </ul>
+                </li>
+                <li><a href="#org40690fc">3.2. Linux</a></li>
+                <li><a href="#org4c2c421">3.3. Web Development</a></li>
+              </ul>
+            </li>
+            <li><a href="#org8a39337">4. Thanks</a></li>
+          </ul>
+        </div>
+      </div>
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-</style>
-</head>
-<body>
-<div id="content" class="content">
-<h1 class="title">Learn to Code</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org5524496">1. About me</a></li>
-<li><a href="#org56e00cc">2. Requirements</a></li>
-<li><a href="#orgb63633e">3. Contents</a>
-<ul>
-<li><a href="#org4f9b2f9">3.1. Programming</a>
-<ul>
-<li><a href="#orge8fd6e3">3.1.1. C/C++</a></li>
-<li><a href="#orgad30464">3.1.2. OOPS</a></li>
-<li><a href="#orgd8a0aac">3.1.3. DSA</a></li>
-<li><a href="#orgd19a850">3.1.4. CP</a></li>
-<li><a href="#org48ded4e">3.1.5. Other languages</a></li>
-</ul>
-</li>
-<li><a href="#org40690fc">3.2. Linux</a></li>
-<li><a href="#org4c2c421">3.3. Web Development</a></li>
-</ul>
-</li>
-<li><a href="#org8a39337">4. Thanks</a></li>
-</ul>
-</div>
-</div>
+      <div id="outline-container-org5524496" class="outline-2">
+        <h2 id="org5524496">
+          <span class="section-number-2">1.</span> About me
+        </h2>
+        <div class="outline-text-2" id="text-1">
+          <table
+            border="2"
+            cellspacing="0"
+            cellpadding="6"
+            rules="groups"
+            frame="hsides"
+          >
+            <colgroup>
+              <col class="org-left" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="org-left">I am Abhishek Raj.</td>
+              </tr>
 
-<div id="outline-container-org5524496" class="outline-2">
-<h2 id="org5524496"><span class="section-number-2">1.</span> About me</h2>
-<div class="outline-text-2" id="text-1">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+              <tr>
+                <td class="org-left">
+                  I did my B.Tech from DCE, Darbhanga in Computer Science and
+                  Engineering (2018-2022)
+                </td>
+              </tr>
 
+              <tr>
+                <td class="org-left">
+                  I love Linux, Programming, 3D Design and much more.
+                </td>
+              </tr>
 
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">I am Abhishek Raj.</td>
-</tr>
+              <tr>
+                <td class="org-left">
+                  I also enjoy teaching and I will be teaching you everything
+                  you need to know to get better in coding.
+                </td>
+              </tr>
 
-<tr>
-<td class="org-left">I did my B.Tech from DCE, Darbhanga in Computer Science and Engineering (2018-2022)</td>
-</tr>
+              <tr>
+                <td class="org-left">
+                  The main idea behind it is to build a strong community where
+                  we can help each other to get better in coding/programming or
+                  any other stuff related to computer.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="org-ul">
+            <li>
+              This is my social media handle
+              <ul class="org-ul">
+                <li><a href="https://github.com/CISSSCO/">GitHub</a></li>
+                <li><a href="mailto:cisssco581b@gmail.com">Gmail</a></li>
+                <li>
+                  <a href="https://www.linkedin.com/in/abhishek-raj-9b891415b/"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li><a href="https://www.youtube.com/@cisssco">YouTube</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-<tr>
-<td class="org-left">I love Linux, Programming, 3D Design and much more.</td>
-</tr>
+      <div id="outline-container-org56e00cc" class="outline-2">
+        <h2 id="org56e00cc">
+          <span class="section-number-2">2.</span> Requirements
+        </h2>
+        <div class="outline-text-2" id="text-2">
+          <p>
+            This is for anyone who wants to know about coding/proramming. This
+            is a course related to programming, any laptop will do the job.
+          </p>
+          <ul class="org-ul">
+            <li>A laptop</li>
+            <li>Android + keyboard + otg (if you don&rsquo;t have a laptop)</li>
+            <li>Internet</li>
+          </ul>
+        </div>
+      </div>
 
-<tr>
-<td class="org-left">I also enjoy teaching and I will be teaching you everything you need to know to get better in coding.</td>
-</tr>
+      <div id="outline-container-orgb63633e" class="outline-2">
+        <h2 id="orgb63633e">
+          <span class="section-number-2">3.</span> Contents
+        </h2>
+        <div class="outline-text-2" id="text-3">
+          <p>
+            These are the topics we will be covering in our upcoming sessions. I
+            will be adding more stuffs as needed.
+          </p>
+        </div>
 
-<tr>
-<td class="org-left">The main idea behind it is to build a strong community where we can help each other to get better in coding/programming or any other stuff related to computer.</td>
-</tr>
-</tbody>
-</table>
-<ul class="org-ul">
-<li>This is my social media handle
-<ul class="org-ul">
-<li><a href="https://github.com/CISSSCO/">GitHub</a></li>
-<li><a href="mailto:cisssco581b@gmail.com">Gmail</a></li>
-<li><a href="https://www.linkedin.com/in/abhishek-raj-9b891415b/">LinkedIn</a></li>
-<li><a href="https://www.youtube.com/@cisssco">YouTube</a></li>
-</ul></li>
-</ul>
-</div>
-</div>
+        <div id="outline-container-org4f9b2f9" class="outline-3">
+          <h3 id="org4f9b2f9">
+            <span class="section-number-3">3.1.</span> Programming
+          </h3>
+          <div class="outline-text-3" id="text-3-1"></div>
+          <div id="outline-container-orge8fd6e3" class="outline-4">
+            <h4 id="orge8fd6e3">
+              <span class="section-number-4">3.1.1.</span> C/C++
+            </h4>
+            <div class="outline-text-4" id="text-3-1-1">
+              <ul class="org-ul">
+                <li>We will be starting with c/c++.</li>
+                <li>
+                  I believe once you know this language, it won&rsquo;t be
+                  difficult to pick the others.
+                </li>
+                <li>
+                  The main idea to start with c/c++ is that the first year
+                  students studing in colleges will benefit from the course for
+                  their examination.
+                </li>
+              </ul>
+            </div>
+          </div>
 
+          <div id="outline-container-orgad30464" class="outline-4">
+            <h4 id="orgad30464">
+              <span class="section-number-4">3.1.2.</span> OOPS
+            </h4>
+            <div class="outline-text-4" id="text-3-1-2">
+              <ul class="org-ul">
+                <li>
+                  After that we will move towards the most important concepts of
+                  c++ programming language called OOPS.
+                </li>
+                <li>
+                  We will study the needs of oops and the main concept behind
+                  the oops like polymorphism, encapsulation, inheritence,
+                  abstration, etc.
+                </li>
+                <li>We will also build some cool project in this section.</li>
+              </ul>
+            </div>
+          </div>
 
-<div id="outline-container-org56e00cc" class="outline-2">
-<h2 id="org56e00cc"><span class="section-number-2">2.</span> Requirements</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-This is for anyone who wants to know about coding/proramming.
-This is a course related to programming, any laptop will do the job.
-</p>
-<ul class="org-ul">
-<li>A laptop</li>
-<li>Android + keyboard + otg (if you don&rsquo;t have a laptop)</li>
-<li>Internet</li>
-</ul>
-</div>
-</div>
+          <div id="outline-container-orgd8a0aac" class="outline-4">
+            <h4 id="orgd8a0aac">
+              <span class="section-number-4">3.1.3.</span> DSA
+            </h4>
+            <div class="outline-text-4" id="text-3-1-3">
+              <ul class="org-ul">
+                <li>
+                  Then we will learn about the Data Structures and Algorithm.
+                </li>
+                <li>
+                  Everybody is afraid of DSA and I was too when I was learning
+                  but I found a good guide and I will share all the knowledge I
+                  have with you guys too.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-<div id="outline-container-orgb63633e" class="outline-2">
-<h2 id="orgb63633e"><span class="section-number-2">3.</span> Contents</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-These are the topics we will be covering in our upcoming sessions.
-I will be adding more stuffs as needed.
-</p>
-</div>
+          <div id="outline-container-orgd19a850" class="outline-4">
+            <h4 id="orgd19a850">
+              <span class="section-number-4">3.1.4.</span> CP
+            </h4>
+            <div class="outline-text-4" id="text-3-1-4">
+              <ul class="org-ul">
+                <li>
+                  We will also be practicing the competitive programming from
+                  the start.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-<div id="outline-container-org4f9b2f9" class="outline-3">
-<h3 id="org4f9b2f9"><span class="section-number-3">3.1.</span> Programming</h3>
-<div class="outline-text-3" id="text-3-1">
-</div>
-<div id="outline-container-orge8fd6e3" class="outline-4">
-<h4 id="orge8fd6e3"><span class="section-number-4">3.1.1.</span> C/C++</h4>
-<div class="outline-text-4" id="text-3-1-1">
-<ul class="org-ul">
-<li>We will be starting with c/c++.</li>
-<li>I believe once you know this language, it won&rsquo;t be difficult to pick the others.</li>
-<li>The main idea to start with c/c++ is that the first year students studing in colleges will benefit from the course for their examination.</li>
-</ul>
-</div>
-</div>
+          <div id="outline-container-org48ded4e" class="outline-4">
+            <h4 id="org48ded4e">
+              <span class="section-number-4">3.1.5.</span> Other languages
+            </h4>
+            <div class="outline-text-4" id="text-3-1-5">
+              <p>
+                Once you know a language it becomes easier to learn the other
+                one. I will also be covering these languages, the main are
+                Python and Java which are most required languages now a days.
+              </p>
+              <ul class="org-ul">
+                <li>Python</li>
+                <li>Java</li>
+                <li>C#, etc.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-<div id="outline-container-orgad30464" class="outline-4">
-<h4 id="orgad30464"><span class="section-number-4">3.1.2.</span> OOPS</h4>
-<div class="outline-text-4" id="text-3-1-2">
-<ul class="org-ul">
-<li>After that we will move towards the most important concepts of c++ programming language called OOPS.</li>
-<li>We will study the needs of oops and the main concept behind the oops like polymorphism, encapsulation, inheritence, abstration, etc.</li>
-<li>We will also build some cool project in this section.</li>
-</ul>
-</div>
-</div>
+        <div id="outline-container-org40690fc" class="outline-3">
+          <h3 id="org40690fc">
+            <span class="section-number-3">3.2.</span> Linux
+          </h3>
+          <div class="outline-text-3" id="text-3-2">
+            <ul class="org-ul">
+              <li>Command Line Interface basics</li>
+              <li>Setting up environment</li>
+              <li>Virtualization</li>
+              <li>
+                Scripting
+                <ul class="org-ul">
+                  <li>bash</li>
+                  <li>batch</li>
+                  <li>perl</li>
+                </ul>
+              </li>
+              <li>System Administration</li>
+              <li>Version control</li>
+              <li>DevOps fundamentals</li>
+            </ul>
+          </div>
+        </div>
 
-<div id="outline-container-orgd8a0aac" class="outline-4">
-<h4 id="orgd8a0aac"><span class="section-number-4">3.1.3.</span> DSA</h4>
-<div class="outline-text-4" id="text-3-1-3">
-<ul class="org-ul">
-<li>Then we will learn about the Data Structures and Algorithm.</li>
-<li>Everybody is afraid of DSA and I was too when I was learning but I found a good guide and I will share all the knowledge I have with you guys too.</li>
-</ul>
-</div>
-</div>
+        <div id="outline-container-org4c2c421" class="outline-3">
+          <h3 id="org4c2c421">
+            <span class="section-number-3">3.3.</span> Web Development
+          </h3>
+          <div class="outline-text-3" id="text-3-3">
+            <p>I also have plans for covering web dev in our course.</p>
+            <ul class="org-ul">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Database, etc.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-<div id="outline-container-orgd19a850" class="outline-4">
-<h4 id="orgd19a850"><span class="section-number-4">3.1.4.</span> CP</h4>
-<div class="outline-text-4" id="text-3-1-4">
-<ul class="org-ul">
-<li>We will also be practicing the competitive programming from the start.</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org48ded4e" class="outline-4">
-<h4 id="org48ded4e"><span class="section-number-4">3.1.5.</span> Other languages</h4>
-<div class="outline-text-4" id="text-3-1-5">
-<p>
-Once you know a language it becomes easier to learn the other one.
-I will also be covering these languages, the main are Python and Java which are most required languages now a days.
-</p>
-<ul class="org-ul">
-<li>Python</li>
-<li>Java</li>
-<li>C#, etc.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org40690fc" class="outline-3">
-<h3 id="org40690fc"><span class="section-number-3">3.2.</span> Linux</h3>
-<div class="outline-text-3" id="text-3-2">
-<ul class="org-ul">
-<li>Command Line Interface basics</li>
-<li>Setting up environment</li>
-<li>Virtualization</li>
-<li>Scripting
-<ul class="org-ul">
-<li>bash</li>
-<li>batch</li>
-<li>perl</li>
-</ul></li>
-<li>System Administration</li>
-<li>Version control</li>
-<li>DevOps fundamentals</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org4c2c421" class="outline-3">
-<h3 id="org4c2c421"><span class="section-number-3">3.3.</span> Web Development</h3>
-<div class="outline-text-3" id="text-3-3">
-<p>
-I also have plans for covering web dev in our course.
-</p>
-<ul class="org-ul">
-<li>HTML</li>
-<li>CSS</li>
-<li>Javascript</li>
-<li>Database, etc.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org8a39337" class="outline-2">
-<h2 id="org8a39337"><span class="section-number-2">4.</span> Thanks</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-All the sessions will be live on google meet or any other video conferencing software.
-</p>
-<ul class="org-ul">
-<li>The live session will be uploaded to youtube. You can watch it as many times as you want.</li>
-<li>The session will be of 1 to 2 hrs max 3 to 4 times a week.</li>
-<li>We will discuss the time before the class. Mostly it will be in evening, it might change according to our needs.</li>
-<li>I will encourage you to get a laptop of your own otherwise I also have a solution for that too.</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: Abhishek Raj</p>
-<p class="date">Created: 2023-01-12 Thu 11:51</p>
-</div>
-</body>
+      <div id="outline-container-org8a39337" class="outline-2">
+        <h2 id="org8a39337"><span class="section-number-2">4.</span> Thanks</h2>
+        <div class="outline-text-2" id="text-4">
+          <p>
+            All the sessions will be live on google meet or any other video
+            conferencing software.
+          </p>
+          <ul class="org-ul">
+            <li>
+              The live session will be uploaded to youtube. You can watch it as
+              many times as you want.
+            </li>
+            <li>The session will be of 1 to 2 hrs max 3 to 4 times a week.</li>
+            <li>
+              We will discuss the time before the class. Mostly it will be in
+              evening, it might change according to our needs.
+            </li>
+            <li>
+              I will encourage you to get a laptop of your own otherwise I also
+              have a solution for that too.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="postamble" class="status">
+      <p class="author">Author: Abhishek Raj</p>
+      <p class="date">Created: 2023-01-12 Thu 11:51</p>
+    </div>
+  </body>
 </html>
