@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Eater&family=Source+Code+Pro:wght@500&display=swap");
 * {
   --primaryColor: #15f900;
   --backgroundColor: #11141d;
@@ -8,6 +9,7 @@
 
 body {
   background-color: var(--backgroundColor);
+  font-family: "Source Code Pro", monospace;
   color: var(--textColor);
 }
 a {
@@ -49,6 +51,8 @@ h4 {
   margin-bottom: 0.2em;
   color: var(--primaryColor);
   /* background-color: ; */
+  font-family: "Eater", cursive;
+  letter-spacing: 5px;
   border-radius: 5px;
 }
 .subtitle {
