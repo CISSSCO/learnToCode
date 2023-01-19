@@ -1,6 +1,6 @@
 #+TITLE: Programming
 
-* Youtube link: [[https://youtube.com/@cisssco][Youtube]]
+* Youtube link: [[https://youtube.com/@freecodingclub][freecodingclub]]
 All the videos of the sessions will be uploaded there.
 
 * Type of programming languages
