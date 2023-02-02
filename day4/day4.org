@@ -1,0 +1,71 @@
+#+TITLE: Day4
+
+* Hello, World breakdown in c++
+#+begin_src cpp
+#include<iostream>
+using namespace std;
+int main(){
+  cout<<"Hello, World"<<endl;
+  return 0;
+}
+#+end_src
+ 
+- ~Iostream~ -> stands for input output stream, it must be included in every c++ file on the top if you want to use input output functionality like cout or cin.
+- In c++ you can also write ~#include<bits/stdc++>~ in place of ~#include<iostream>~, but remember that it will include all the libraries inside the c++ (means you don't need to include any other header files after it.
+- ~using namespace std~ is used to avoid writing ~std::cout<<~ or ~std::cin>>~ every time.
+- ~main()~ function is the main part of the code. It is called automatically. Only the line of code inside main function will be taken under consideration by the compiler.
+- ~endl~ is used to put a newline. You can also use ~"\n"~ in place of endl.
+- All the statements must include a semicolon ~;~ at the end of the line.
+- Anything written after ~return 0;~ will not be considered by the compiler.
+  #+begin_src cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  cout<<"Will be printed on the output screen\n";
+  return 0;
+  cout<<"Will not be printed on the output screen\n";
+}
+  #+end_src
+
+
+* Variables
+** Local variable
+It is the variable defined inside a function or a condition. You can't use it outside the function or condition in which it is defined.
+#+begin_src cpp
+#include<iostream>
+using namespace std;
+int main(){
+  if(true){
+    int a = 6;        //defining local variable
+    cout<<a<<endl;    //this is correct
+  }
+  cout<<a<<endl;      //this is incorrect
+  return 0;
+}
+#+end_src
+- In the above code line above ~return 0;~ will give you an error because you are trying to access ~a~ which was defined in if condition.
+- It is only accessible within the curly braces ~{}~ of if condition.
+
+** Global variable
+It is the variable defined outside the main function. It is used in every part of your code after the line from where it is defined.
+#+begin_src cpp
+#include<iostream>
+using namespace std;
+int a = 6;          //defining global variable
+int main(){
+  if(true){
+    cout<<a<<endl;    //this is correct
+  }
+  cout<<a<<endl;      //this is also correct
+  return 0;
+}
+#+end_src
+
+* References
+** Youtube link: [[https://youtube.com/@freecodingclub][freecodingclub]]
+All the videos of the sessions will be uploaded there.
+
+** Other links
+- [[https://cppreference.com/][cppreference.com]]
+- [[https://cplusplus.com/][cplusplus.com]]
+- [[https://cpp.sh/][cpp.sh]]
