@@ -1,0 +1,53 @@
+#+title: Git and GitHub
+
+* Basic commands for file navigation
+
+** listing files
+*** Linux
+- ~ls~ showing files in current directory or folder
+- ~ls -la~ showing all files (includeing hidden) each in a single line
+*** Windows
+- ~dir~ to show files in current directory
+
+** create
+- ~mkdir foldername~ create a folder with name = foldername
+- ~md foldername~ in some shell md is also used as a sort form of ~mkdir~
+- ~touch filename~ will create a file on *Linux*
+
+** delete
+- ~rmdir foldername~ used to remove empty folder
+- ~rm -rf foldername~ used to delete folder and all its content
+  ::Note: use it carefully bcz it will delete everything without any message or warning if typed incorrectly. Only use it when you are sure that you are deleting the right thing
+- ~rm filename~ deletes a file on *linux*
+- ~del foldername~ (*only windows*) deletes every content inside a folder leaving the exixtence of the folder
+
+* Steps to install git
+** Linux
+*** Ubuntu
+- ~sudo apt install git~
+** Windows
+- You can download the file from the [[https://git-scm.com/downloads][link]] and install
+- Or you can type ~winget install --id Git.Git -e --source winget~ in powershell or command prompt and you are goot to go.
+** Android
+- Open termux and type the command-
+- ~pkg install git~ or
+- ~apt install git~ after successfull operation everything you need is installed, you can use all the commands below used in *git*
+
+* Git commands
+- ~git status~ to check the status of repo at any time
+- ~git add filename~ to track a single file
+- ~git add .~ track all the changes in current folder
+- ~git commit -m "writer message"~ file ready to commit and push
+- ~git push~ it will upload all your changes to online git hosting plateform like *github*
+
+* Git workflow in just 3 commands
+- ~git add .~ track all your changes
+- ~git commit -m "message"~ commit your changes
+- ~git push~ upload all your changes
+  ::Note: You can use ~git status~ anytime to check what is happening in your repository.
+
+* References
+*** [[https://youtube.com/@freecodingclub][YouTube]]
+*** [[https://www.youtube.com/watch?v=pwxwjX82pRQ&list=PLxQXJdvflup2rvN6ALwRX3X9hZfTk2L6Z][GitHub playlist]]
+*** [[https://git-scm.com/downloadshttps://git-scm.com/downloads][Download Git]]
+*** [[https://github.com/CISSSCO/learnToCode][LearnToCode Resources]]
