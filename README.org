@@ -9,9 +9,9 @@
 | The main idea behind it is to build a strong community where we can help each other to get better in coding/programming or any other stuff related to computer. |
 + These are my social media handles
   - [[https://github.com/CISSSCO/][GitHub]]
-  - [[mailto:cisssco581b@gmail.com][Gmail]]
+  - [[mailto:freecodingclub@gmail.com][Gmail]]
   - [[https://www.linkedin.com/in/abhishek-raj-9b891415b/][LinkedIn]]
-  - [[https://www.youtube.com/@cisssco][YouTube]]
+  - [[https://www.youtube.com/@freecodingclub][YouTube]]
 
 
 * Requirements
@@ -26,7 +26,7 @@ These are the topics we will be covering in our upcoming sessions.
 I will be adding more stuffs as needed.
 
 ** Programming
-*** C/C++
+*** [[https://www.youtube.com/watch?v=RTARink0Qe8&list=PLxQXJdvflup2xMMdzxsBiGYwLKTttlanG][C/C++]]
   + We will be starting with c/c++.
   + I believe once you know this language, it won't be difficult to pick the others.
   + The main idea to start with c/c++ is that the first year students studying in colleges will benefit from the course for their examination.
@@ -62,7 +62,7 @@ I will also be covering these languages, the main are Python and Java which are 
  - Version control
  - DevOps fundamentals
 
-** Web Development
+** [[https://www.youtube.com/watch?v=b3JFWh1-xPE&list=PLxQXJdvflup2hzEXmadhOSDsfIhxBGdgV][Web Development]]
 I also have plans for covering web dev in our course.
  - HTML
  - CSS
