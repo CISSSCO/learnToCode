@@ -21,6 +21,7 @@ h2 {
   /* text-align: center; */
 }
 
+
 h3 {
   color: var(--darkgreen);
 }
@@ -29,6 +30,13 @@ h4 {
   color: var(--darkgreen);
 }
 
+h3 a {
+  color: var(--darkgreen);
+}
+
+h4 a {
+  color: var(--darkgreen);
+}
 .org-ul {
   color: var(--textColor);
 }
