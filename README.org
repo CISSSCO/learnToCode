@@ -64,9 +64,9 @@ I will also be covering these languages, the main are Python and Java which are 
 
 ** [[https://www.youtube.com/watch?v=b3JFWh1-xPE&list=PLxQXJdvflup2hzEXmadhOSDsfIhxBGdgV][Web Development]]
 I also have plans for covering web dev in our course.
- - HTML
- - CSS
- - Javascript
+ - [[https://www.youtube.com/watch?v=b3JFWh1-xPE&list=PLxQXJdvflup2-sRl0kQzTBjq46jBUfZKY&pp=iAQB][HTML]]
+ - [[https://www.youtube.com/watch?v=Ai3GQwsVgRA&list=PLxQXJdvflup0oPQk41WyTFoXizbLxuUOH&pp=iAQB][CSS]]
+ - [[https://www.youtube.com/watch?v=ZJH0yEZhRTA&list=PLxQXJdvflup2VqeIpS2FWfTAMvij2T2Bh&pp=iAQB][Javascript]]
  - Database, etc.
 
 * Thanks
