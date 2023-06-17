@@ -1,0 +1,16 @@
+x = 20;
+// x = x + 12;
+x+= 12;
+console.log(x);
+x-= 5;
+console.log(x);
+x*= 3;
+console.log(x);
+x/= 4;
+console.log(x);
+b = 14;
+b%= 3;
+console.log(b);
+b**= 2;
+console.log(b);
+// x= x**2;
