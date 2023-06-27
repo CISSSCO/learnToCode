@@ -1,0 +1,22 @@
+//BigInt
+a = 61111111111n;
+b = 7;
+c = 99999999999999998988888n;
+d = 99999999999999998988888n;
+e = 111111111111111111111111111n;
+f = 111111111111111111111111111n;
+console.log(a);
+console.log(typeof c);
+console.log(c);
+console.log(Number(a));
+console.log(Number(a) * b);
+console.log(a * BigInt(b));
+console.log(c * d); 
+console.log(e * f);
+let g = BigInt(123123123);
+console.log(typeof g);
+console.log(g);
+h = 123123123n;
+console.log(h);
+console.log(g == h);
+console.log(g === h);
